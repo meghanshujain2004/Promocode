@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Exclusive Offer | Claim Your 50% Off Coupon</title>
+    <meta name="description"
+        content="Unlock exclusive Myntra discount coupon code NEW50 by filling in your quick details. Flat 50% OFF on top fashion brands!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Decor Elements -->
+    <div class="bg-blur bg-blur-1"></div>
+    <div class="bg-blur bg-blur-2"></div>
+    <div class="bg-blur bg-blur-3"></div>
+
+    <!-- Canvas for Confetti -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Top Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand-logo">
+                <span class="brand-m">M</span>
+                <span class="brand-name">MYNTRA<span class="highlight">OFFERS</span></span>
+            </div>
+            <div class="nav-badges">
+                <span class="badge badge-verified"><i class="fa-solid fa-circle-check"></i> Verified Partner
+                    Offer</span>
+                <button id="open-admin-btn" class="btn-admin-trigger" title="Owner Lead Dashboard">
+                    <i class="fa-solid fa-user-shield"></i> Leads Dashboard
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-wrapper">
+        <div class="container">
+
+            <!-- Banner & Headline -->
+            <section class="hero-section">
+                <div class="tag-pill">
+                    <i class="fa-solid fa-bolt-lightning"></i> LIMITED TIME FESTIVAL SPECIAL
+                </div>
+                <h1 class="hero-title">Unlock Extra <span class="text-gradient">50% OFF</span> Coupon Code</h1>
+                <p class="hero-subtitle">Get instant access to your exclusive promo code for Myntra Fashion, Footwear, &
+                    Accessories.</p>
+
+                <div class="timer-card">
+                    <i class="fa-regular fa-clock"></i> Offer Expires In: <span id="countdown">14:59</span>
+                </div>
+            </section>
+
+            <!-- Card Layout (Form + Offer Preview) -->
+            <div class="card-grid">
+
+                <!-- Left Column: Form -->
+                <div class="glass-card form-card">
+                    <div class="card-header">
+                        <div class="step-indicator">
+                            <span class="step-circle active">1</span>
+                            <span class="step-label">Verification Form</span>
+                        </div>
+                        <h2>Enter Details To Unlock</h2>
+                        <p>Fill all compulsory fields to get your personalized promo code immediately.</p>
+                    </div>
+
+                    <form id="couponForm" class="styled-form" novalidate>
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="req">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user field-icon"></i>
+                                <input type="text" id="fullName" placeholder="e.g. Rahul Sharma" required
+                                    autocomplete="name">
+                            </div>
+                            <span class="error-msg" id="nameError">Please enter your valid name</span>
+                        </div>
+
+                        <!-- Age & Gender Row -->
+                        <div class="form-row">
+                            <!-- Age -->
+                            <div class="form-group col-half">
+                                <label for="age">Age <span class="req">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-calendar field-icon"></i>
+                                    <input type="number" id="age" min="10" max="120" placeholder="e.g. 24" required>
+                                </div>
+                                <span class="error-msg" id="ageError">Enter valid age (10-120)</span>
+                            </div>
+
+                            <!-- Gender -->
+                            <div class="form-group col-half">
+                                <label for="gender">Gender <span class="req">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-venus-mars field-icon"></i>
+                                    <select id="gender" required>
+                                        <option value="" disabled selected>Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                        <option value="Prefer not to say">Prefer not to say</option>
+                                    </select>
+                                </div>
+                                <span class="error-msg" id="genderError">Please select gender</span>
+                            </div>
+                        </div>
+
+                        <!-- Where did you hear from us -->
+                        <div class="form-group">
+                            <label for="source">Where did you hear about us? <span class="req">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-bullhorn field-icon"></i>
+                                <select id="source" required>
+                                    <option value="" disabled selected>Select platform / source</option>
+                                    <option value="Instagram">Instagram Ad / Post</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="YouTube">YouTube</option>
+                                    <option value="Friend / Family">Friend or Family</option>
+                                    <option value="Google Search">Google Search</option>
+                                    <option value="WhatsApp">WhatsApp Group / Message</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <span class="error-msg" id="sourceError">Please select where you heard about this</span>
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number (10-Digit) <span class="req">*</span></label>
+                            <div class="input-wrapper mobile-input-wrapper">
+                                <span class="country-prefix">+91</span>
+                                <input type="tel" id="mobile" placeholder="98765 43210" maxlength="10" required
+                                    autocomplete="tel">
+                            </div>
+                            <span class="error-msg" id="mobileError">Please enter a valid 10-digit mobile number</span>
+                            <small class="field-hint"><i class="fa-solid fa-shield-halved"></i> Verified number</small>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submitBtn" class="btn-primary">
+                            <span>Reveal Myntra Code</span>
+                            <i class="fa-solid fa-key"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Locked/Unlocked Coupon Card -->
+                <div class="glass-card coupon-display-card">
+
+                    <!-- State 1: Locked View -->
+                    <div id="lockedView" class="coupon-box locked">
+                        <div class="lock-icon-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="coupon-brand-badge">MYNTRA EXCLUSIVE</div>
+                        <h3 class="coupon-offer-title">FLAT 50% OFF</h3>
+                        <p class="coupon-offer-sub">Applicable on All Styles & Categories</p>
+
+                        <div class="coupon-hidden-preview">
+                            <span class="blur-code">NEW50</span>
+                            <span class="lock-overlay"><i class="fa-solid fa-lock"></i> LOCKED</span>
+                        </div>
+
+                        <div class="unlock-steps-info">
+                            <p><i class="fa-solid fa-circle-info"></i> Fill the form on the left to reveal code
+
+                        </div>
+                    </div>
+
+                    <!-- State 2: Unlocked View (Hidden initially) -->
+                    <div id="unlockedView" class="coupon-box unlocked hidden">
+                        <div class="success-badge">
+                            <i class="fa-solid fa-circle-check"></i> UNLOCKED SUCCESSFUL!
+                        </div>
+                        <div class="coupon-brand-badge">MYNTRA PROMO CODE</div>
+
+                        <h3 class="coupon-offer-title">CONGRATULATIONS!</h3>
+                        <p class="coupon-offer-sub">Your coupon code is ready to use on Myntra app & web.</p>
+
+                        <!-- Revealed Coupon Box -->
+                        <div class="code-box-revealed">
+                            <div class="code-text" id="couponCode">NEW50</div>
+                            <button id="copyBtn" class="btn-copy">
+                                <i class="fa-regular fa-copy"></i>
+                                <span id="copyText">COPY CODE</span>
+                            </button>
+                        </div>
+
+                        <div class="coupon-perks">
+                            <div class="perk-item"><i class="fa-solid fa-check"></i> Flat 50% Discount</div>
+                            <div class="perk-item"><i class="fa-solid fa-check"></i> Valid on Brands & Clearance</div>
+                            <div class="perk-item"><i class="fa-solid fa-check"></i> Instant Checkout Discount</div>
+                        </div>
+
+                        <a href="https://www.myntra.com" target="_blank" rel="noopener" class="btn-shop">
+                            <span>Shop Now on Myntra</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2026 Myntra Offer Portal. All promo codes subject to Myntra T&C.</p>
+            <button id="footerAdminBtn" class="footer-admin-link"><i class="fa-solid fa-lock"></i> Owner
+                Dashboard</button>
+        </div>
+    </footer>
+
+    <!-- Owner / Admin Lead Management Modal -->
+    <div id="adminModal" class="modal-backdrop hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div>
+                    <h2><i class="fa-solid fa-database"></i> Captured User Leads Dashboard</h2>
+                    <p class="modal-subtitle">View, search, and export data submitted by users on this page.</p>
+                </div>
+                <button id="closeAdminBtn" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <!-- Modal Body: Password protection or Lead Table -->
+            <div class="modal-body">
+
+                <!-- Auth Section (if not logged in) -->
+                <div id="adminAuthSection" class="admin-auth-box">
+                    <div class="auth-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Owner Verification</h3>
+                    <p>Enter passkey to view stored lead records.</p>
+                    <div class="auth-input-group">
+                        <input type="password" id="adminPinInput" placeholder="Enter PIN"
+                            autocomplete="current-password">
+                        <button id="adminLoginBtn" class="btn-primary-sm">Login</button>
+                    </div>
+                    <span id="authError" class="auth-error-msg hidden">Invalid Access PIN</span>
+                </div>
+
+                <!-- Content Section (Shown when authenticated) -->
+                <div id="adminDataSection" class="admin-data-box hidden">
+
+                    <div class="table-actions">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="leadSearchInput" placeholder="Search name, phone, platform...">
+                        </div>
+                        <div class="action-buttons">
+                            <button id="exportCsvBtn" class="btn-action btn-export">
+                                <i class="fa-solid fa-file-csv"></i> Download CSV
+                            </button>
+                            <button id="exportJsonBtn" class="btn-action btn-export-json">
+                                <i class="fa-solid fa-code"></i> Download JSON
+                            </button>
+                            <button id="clearDataBtn" class="btn-action btn-danger">
+                                <i class="fa-solid fa-trash-can"></i> Clear All
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="stats-bar">
+                        <span>Total Submissions: <strong id="totalLeadsCount">0</strong></span>
+                        <span>Code Revealed: <strong class="badge-tag">NEW50</strong></span>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="leads-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Date & Time</th>
+                                    <th>Full Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Heard From</th>
+                                    <th>Mobile Number</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leadsTableBody">
+                                <!-- Dynamic Rows injected here -->
+                            </tbody>
+                        </table>
+                        <div id="emptyLeadsState" class="empty-state hidden">
+                            <i class="fa-regular fa-folder-open"></i>
+                            <p>No user submissions captured yet. Fill out the main form to test!</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMsg">Code copied to clipboard!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

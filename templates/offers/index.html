@@ -1,0 +1,454 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Coupons [90% + ₹300 OFF] Promo Codes Oct 2026 | GrabOn</title>
+    <meta name="description"
+        content="Today's Myntra Coupon Codes & Offers: 90% OFF + Extra ₹300 OFF First Order Coupons | FLAT 50% OFF Discount on Clothing & Footwear.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="top-ticker">
+        <span>🔥 TODAY'S TOP DEAL:</span> Myntra Big Fashion Festival LIVE! Exclusive Coupon Codes Available Below.
+    </div>
+
+    <!-- Canvas for Confetti -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Header Navigation Bar -->
+    <header class="grabon-header">
+        <div class="header-container">
+            <a href="#" class="grabon-logo-box">
+                <span class="logo-badge">GO</span>
+                <span class="logo-text">Grab<span>On</span></span>
+            </a>
+
+            <div class="search-bar-wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for brands, categories, or store coupons..." id="gSearchInput">
+            </div>
+
+            <div class="nav-right-actions">
+                <a href="#coupons" class="nav-link-item">Stores</a>
+                <a href="#coupons" class="nav-link-item">Categories</a>
+                <a href="#coupons" class="nav-link-item">Deals Of The Day</a>
+                <button id="open-admin-btn" class="btn-owner-portal" title="Admin Portal">
+                    <i class="fa-solid fa-user-shield"></i> Admin
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Bar -->
+    <div class="breadcrumb-bar">
+        <div class="breadcrumb-container">
+            <a href="#">Home</a> <i class="fa-solid fa-angle-right"></i>
+            <a href="#">Fashion</a> <i class="fa-solid fa-angle-right"></i>
+            <a href="#">Clothing</a> <i class="fa-solid fa-angle-right"></i>
+            <span class="active">Myntra Coupons</span>
+        </div>
+    </div>
+
+    <!-- Merchant Hero Header -->
+    <section class="merchant-hero">
+        <div class="merchant-container">
+            <div class="merchant-logo-box">
+                <svg viewBox="0 0 300 200" width="80" height="55">
+                    <path fill="#ff3f6c" d="M150 0 C130 50 110 100 90 150 C80 120 70 90 60 60 C50 90 40 120 30 150 C20 100 10 50 0 0 L30 0 C40 40 50 80 60 120 C70 80 80 40 90 0 L120 0 L150 0 Z"></path>
+                    <path fill="#f43397" d="M150 0 C170 50 190 100 210 150 C220 120 230 90 240 60 C250 90 260 120 270 150 C280 100 290 50 300 0 L270 0 C260 40 250 80 240 120 C230 80 220 40 210 0 L180 0 L150 0 Z"></path>
+                    <path fill="#ffb400" d="M90 150 C110 100 130 50 150 0 C170 50 190 100 210 150 L180 150 C170 110 160 70 150 30 C140 70 130 110 120 150 Z"></path>
+                </svg>
+            </div>
+            <div class="merchant-info">
+                <h1 class="merchant-title">Myntra Coupon Codes & Offers</h1>
+                <div class="merchant-meta">
+                    <span><i class="fa-solid fa-circle-check text-green"></i> Best 66 Coupons & Offers Verified Today</span>
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.8 / 5 (1,475 Votes)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Tabs Bar -->
+    <div class="filter-tabs-bar">
+        <button class="tab-btn active"><i class="fa-solid fa-fire"></i> All <span class="tab-count">66</span></button>
+        <button class="tab-btn"><i class="fa-solid fa-ticket"></i> Coupons <span class="tab-count">45</span></button>
+        <button class="tab-btn"><i class="fa-solid fa-bolt"></i> Offers <span class="tab-count">21</span></button>
+        <button class="tab-btn"><i class="fa-solid fa-sparkles"></i> Fresh Deals <span class="tab-count">1</span></button>
+    </div>
+
+    <!-- Main Content Layout -->
+    <main class="main-layout" id="coupons">
+        
+        <!-- Left Column: GrabOn Coupon Cards List -->
+        <div class="coupons-list">
+            
+            <!-- Coupon Card 1 -->
+            <div class="coupon-card">
+                <div class="card-left-badge">
+                    <div class="badge-discount-val">50%</div>
+                    <div class="badge-discount-sub">OFF</div>
+                </div>
+                <div class="card-body-content">
+                    <h3 class="card-title">Myntra Big Fashion Festival: Flat 50% - 90% OFF + Extra Discount Coupon</h3>
+                    <p class="card-desc">Applicable on Men's, Women's & Kids fashion lifestyle products. Valid on top fashion brands.</p>
+                    <div class="card-meta-row">
+                        <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> 100% Verified</span>
+                        <span class="uses-tag"><i class="fa-solid fa-users"></i> 3,920 Uses Today</span>
+                        <button class="btn-show-code trigger-lead-modal" data-offer="Myntra Big Fashion Festival 50% OFF" data-code="BFF50">
+                            <i class="fa-solid fa-scissors"></i> SHOW CODE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coupon Card 2 -->
+            <div class="coupon-card">
+                <div class="card-left-badge">
+                    <div class="badge-discount-val">₹500</div>
+                    <div class="badge-discount-sub">OFF</div>
+                </div>
+                <div class="card-body-content">
+                    <h3 class="card-title">First Order APP Deal: Flat ₹500 OFF + Free Shipping on Min Purchase</h3>
+                    <p class="card-desc">Exclusive offer for new Myntra app users. Minimum cart value applicable.</p>
+                    <div class="card-meta-row">
+                        <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> 100% Verified</span>
+                        <span class="uses-tag"><i class="fa-solid fa-users"></i> 2,480 Uses Today</span>
+                        <button class="btn-show-code trigger-lead-modal" data-offer="First Order APP Deal ₹500 OFF" data-code="MYNTRA500">
+                            <i class="fa-solid fa-ticket"></i> GET COUPON
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coupon Card 3 -->
+            <div class="coupon-card">
+                <div class="card-left-badge">
+                    <div class="badge-discount-val">30%</div>
+                    <div class="badge-discount-sub">OFF</div>
+                </div>
+                <div class="card-body-content">
+                    <h3 class="card-title">Sitewide Savings: Extra 30% OFF on Men, Women & Kids Fashion</h3>
+                    <p class="card-desc">Save extra on shirts, kurtas, jeans, dresses, & accessories across top brands.</p>
+                    <div class="card-meta-row">
+                        <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> 100% Verified</span>
+                        <span class="uses-tag"><i class="fa-solid fa-users"></i> 1,850 Uses Today</span>
+                        <button class="btn-show-code trigger-lead-modal" data-offer="Sitewide Savings Extra 30% OFF" data-code="SAVE30">
+                            <i class="fa-solid fa-scissors"></i> SHOW CODE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coupon Card 4 -->
+            <div class="coupon-card">
+                <div class="card-left-badge">
+                    <div class="badge-discount-val">40%</div>
+                    <div class="badge-discount-sub">OFF</div>
+                </div>
+                <div class="card-body-content">
+                    <h3 class="card-title">Footwear Clearance: Extra 40% OFF on Sneakers, Sports Shoes & Boots</h3>
+                    <p class="card-desc">Valid on HRX, Nike, Puma, Adidas, Roadster & Red Tape footwear collection.</p>
+                    <div class="card-meta-row">
+                        <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> 100% Verified</span>
+                        <span class="uses-tag"><i class="fa-solid fa-users"></i> 1,410 Uses Today</span>
+                        <button class="btn-show-code trigger-lead-modal" data-offer="Footwear Clearance Extra 40% OFF" data-code="FOOT40">
+                            <i class="fa-solid fa-scissors"></i> SHOW CODE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coupon Card 5 -->
+            <div class="coupon-card">
+                <div class="card-left-badge">
+                    <div class="badge-discount-val">15%</div>
+                    <div class="badge-discount-sub">CASHBACK</div>
+                </div>
+                <div class="card-body-content">
+                    <h3 class="card-title">Bank Offer: Extra 15% Instant Cashback on Credit & Debit Cards</h3>
+                    <p class="card-desc">Get additional instant bank discount on HDFC, SBI, Kotak & Axis Bank cards.</p>
+                    <div class="card-meta-row">
+                        <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> 100% Verified</span>
+                        <span class="uses-tag"><i class="fa-solid fa-users"></i> 980 Uses Today</span>
+                        <button class="btn-show-code trigger-lead-modal" data-offer="Bank Offer Extra 15% Cashback" data-code="BANK15">
+                            <i class="fa-solid fa-bolt"></i> GET DEAL
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+            
+            <div class="sidebar-box">
+                <h4 class="sidebar-title">Myntra Offers Summary</h4>
+                <table class="summary-table">
+                    <tbody>
+                        <tr>
+                            <td class="label">Discount</td>
+                            <td class="val">Up to 90% OFF + ₹500 OFF</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Applies To</td>
+                            <td class="val">Fashion & Beauty</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Order Value</td>
+                            <td class="val">Min ₹349 & Above</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Valid For</td>
+                            <td class="val">New & Existing Users</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="sidebar-box">
+                <h4 class="sidebar-title">Popular Categories</h4>
+                <ul style="list-style: none; font-size: 0.88rem; line-height: 2;">
+                    <li><i class="fa-solid fa-angle-right text-muted"></i> Men's Casual & Formal Shirts</li>
+                    <li><i class="fa-solid fa-angle-right text-muted"></i> Women's Ethnic Wear & Kurtas</li>
+                    <li><i class="fa-solid fa-angle-right text-muted"></i> Sports Shoes & Sneakers</li>
+                    <li><i class="fa-solid fa-angle-right text-muted"></i> Luxury Watches & Accessories</li>
+                    <li><i class="fa-solid fa-angle-right text-muted"></i> Beauty & Skincare Products</li>
+                </ul>
+            </div>
+
+        </aside>
+    </main>
+
+    <!-- COMPULSORY LEAD CAPTURE FORM MODAL (Triggers on SHOW CODE) -->
+    <div id="leadCaptureModal" class="lead-modal-backdrop hidden">
+        <div class="lead-modal-card">
+            
+            <div class="modal-header-grabon">
+                <div>
+                    <h3><i class="fa-solid fa-key"></i> Unlock Myntra Coupon Code</h3>
+                </div>
+                <button id="closeLeadModalBtn" class="btn-close-lead"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="modal-body-lead">
+                
+                <div class="modal-offer-summary" id="modalOfferTitle">
+                    <i class="fa-solid fa-ticket-simple text-pink"></i> Fill details to unlock your coupon code
+                </div>
+
+                <!-- Form Section (State 1) -->
+                <div id="leadFormState">
+                    <form id="couponForm" class="styled-form" novalidate>
+                        {% csrf_token %}
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="req">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user field-icon"></i>
+                                <input type="text" id="fullName" placeholder="e.g. Rahul Sharma" required autocomplete="name">
+                            </div>
+                            <span class="error-msg" id="nameError">Please enter your valid full name</span>
+                        </div>
+
+                        <!-- Age & Gender Row -->
+                        <div class="form-row">
+                            <!-- Age -->
+                            <div class="form-group col-half">
+                                <label for="age">Age <span class="req">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-calendar field-icon"></i>
+                                    <input type="number" id="age" min="10" max="120" placeholder="e.g. 24" required>
+                                </div>
+                                <span class="error-msg" id="ageError">Enter valid age (10-120)</span>
+                            </div>
+
+                            <!-- Gender -->
+                            <div class="form-group col-half">
+                                <label for="gender">Gender <span class="req">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-venus-mars field-icon"></i>
+                                    <select id="gender" required>
+                                        <option value="" disabled selected>Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                        <option value="Prefer not to say">Prefer not to say</option>
+                                    </select>
+                                </div>
+                                <span class="error-msg" id="genderError">Please select gender</span>
+                            </div>
+                        </div>
+
+                        <!-- Where did you hear from us -->
+                        <div class="form-group">
+                            <label for="source">Where did you hear about us? <span class="req">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-bullhorn field-icon"></i>
+                                <select id="source" required>
+                                    <option value="" disabled selected>Select platform / source</option>
+                                    <option value="Instagram">Instagram Ad / Post</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="YouTube">YouTube</option>
+                                    <option value="Friend / Family">Friend or Family</option>
+                                    <option value="Google Search">Google Search</option>
+                                    <option value="WhatsApp">WhatsApp Group / Message</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <span class="error-msg" id="sourceError">Please select where you heard about this</span>
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number (10-Digit) <span class="req">*</span></label>
+                            <div class="input-wrapper mobile-input-wrapper">
+                                <span class="country-prefix">+91</span>
+                                <input type="tel" id="mobile" placeholder="98765 43210" maxlength="10" required autocomplete="tel">
+                            </div>
+                            <span class="error-msg" id="mobileError">Please enter a valid 10-digit mobile number</span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submitBtn" class="btn-unlock-submit">
+                            <span>Submit & Show Code</span>
+                            <i class="fa-solid fa-unlock"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Unlocked Code View (State 2) -->
+                <div id="unlockedCodeState" class="revealed-code-card hidden">
+                    <div class="success-badge" style="display:inline-block; margin-bottom: 0.5rem;">
+                        <i class="fa-solid fa-circle-check"></i> COUPON CODE UNLOCKED!
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Your details have been verified and saved.</p>
+
+                    <div class="code-display-box">
+                        <div class="code-text-val" id="couponCode">BFF50</div>
+                        <button id="copyBtn" class="btn-copy-code">
+                            <i class="fa-regular fa-copy"></i>
+                            <span id="copyText">COPY CODE</span>
+                        </button>
+                    </div>
+
+                    <a href="https://www.myntra.com" target="_blank" rel="noopener" class="btn-unlock-submit" style="text-decoration:none;">
+                        <span>Shop Now on Myntra</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Owner Lead Management Modal -->
+    <div id="adminModal" class="lead-modal-backdrop hidden">
+        <div class="lead-modal-card" style="max-width: 950px;">
+            <div class="modal-header-grabon">
+                <div>
+                    <h3><i class="fa-solid fa-user-shield"></i> Admin Leads Dashboard</h3>
+                </div>
+                <button id="closeAdminBtn" class="btn-close-lead"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="modal-body-lead">
+
+                <!-- Auth Section -->
+                <div id="adminAuthSection" class="admin-auth-box">
+                    <div class="auth-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Owner Verification</h3>
+                    <p>Enter passkey to view stored MySQL lead records.</p>
+                    <div class="auth-input-group">
+                        <input type="password" id="adminPinInput" placeholder="Enter PIN" autocomplete="current-password">
+                        <button id="adminLoginBtn" class="btn-primary-sm">Login</button>
+                    </div>
+                    <span id="authError" class="auth-error-msg hidden">Invalid Access PIN</span>
+                </div>
+
+                <!-- Content Section -->
+                <div id="adminDataSection" class="admin-data-box hidden">
+
+                    <div class="table-actions">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="leadSearchInput" placeholder="Search name, phone, platform...">
+                        </div>
+                        <div class="action-buttons">
+                            <a href="/api/export-csv/" class="btn-action btn-export" download>
+                                <i class="fa-solid fa-file-csv"></i> Download CSV (MySQL)
+                            </a>
+                            <button id="exportJsonBtn" class="btn-action btn-export-json">
+                                <i class="fa-solid fa-code"></i> JSON View
+                            </button>
+                            <button id="clearDataBtn" class="btn-action btn-danger">
+                                <i class="fa-solid fa-trash-can"></i> Clear All
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="stats-bar">
+                        <span>Total Database Leads: <strong id="totalLeadsCount">0</strong></span>
+                        <span>Coupon Status: <strong class="badge-tag">ACTIVE</strong></span>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="leads-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Date & Time</th>
+                                    <th>Full Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Heard From</th>
+                                    <th>Mobile Number</th>
+                                    <th>Code Unlocked</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leadsTableBody">
+                                <!-- Dynamic Rows -->
+                            </tbody>
+                        </table>
+                        <div id="emptyLeadsState" class="empty-state hidden">
+                            <i class="fa-regular fa-folder-open"></i>
+                            <p>No user submissions captured yet.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMsg">Code copied to clipboard!</span>
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
